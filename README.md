@@ -26,11 +26,38 @@ min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
 top_left = min_loc
 bottom_right = (top_left[0] + w, top_left[1] + h)
 ```
-* Hitung kordinat pusat button
+* Mengitung kordinat pusat button
 ```sh
 center = ((top_left[0] + bottom_right[0]) / 2, (top_left[1] + bottom_right[1]) / 2)
 ```
+* Mencocokkan template field gambar
+```sh
+res = cv2.matchTemplate(img, field, cv2.TM_SQDIFF)
+min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+top_left = min_loc
+bottom_right = (top_left[0] + w, top_left[1] + h)
+```
+* Menghitung kordinat bidang, dengan asumsi jarak konstan antar box.
+```sh
+red = ((top_left[0] + bottom_right[0]) / 2, (top_left[1] + bottom_right[1]) / 2)
+blue = (red[0], red[1] + 20)
+green = (red[0], red[1] + 40)
+```
+* Mencocokkan template OK button.
+```sh
+res = cv2.matchTemplate(img, ok_button, cv2.TM_SQDIFF)
+min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+top_left = min_loc
+bottom_right = (top_left[0] + w, top_left[1] + h)
+button = ((top_left[0] + bottom_right[0]) / 2, (top_left[1] + bottom_right[1]) / 2)
 
+ret = {
+    "red": red,
+    "blue": blue,
+    "green": green,
+    "ok": button
+}
+```
 
 ## 2. Dependencies
 
