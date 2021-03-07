@@ -30,4 +30,4 @@ python bobross.py
 
 #### Berikut hasil ketika program dijalankan
 
-[![gif_hasil][hasil_gif]]
+![](Examples/hasil.gif)
