@@ -3,7 +3,7 @@
 
 ## 1. Code and Files
 
-#### My project includes the following files
+#### Beberapa penjelasan
 
 * [bobross.py](bobross.py) Script utama
 * [Examples](Examples) folder berisi contoh hasil
@@ -12,8 +12,22 @@
 
 ## 2. Dependencies
 
-#### Anaconda is used for managing my [**dependencies**](https://github.com/udacity/CarND-Term1-Starter-Kit).
+#### Saya menggunakan Visual Studio Code sebagai editor
 
-* You can use provided [environment-gpu.yml](environment-gpu.yml) to install the dependencies.
-* OpenCV3, Python3.5, tensorflow, CUDA8  
-* OS: Ubuntu 16.04
+* Python3.7, OpenCV3, pyinput dan pillow 
+```sh
+pip install opencv-python pynput pillow
+```
+* OS: Windows 10
+
+## 3. How To Run
+
+#### If you want to run the demo, you can simply run:
+```sh
+python bobross.py
+```
+## 4. Hasil
+
+#### Berikut hasil ketika program dijalankan
+
+[![gif_hasil][hasil_gif]]
