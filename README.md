@@ -63,7 +63,7 @@ ret = {
 
 #### Saya menggunakan Visual Studio Code sebagai editor
 
-* Python3.7, OpenCV3, pyinput dan pillow 
+* Python3.7, OpenCV, pyinput dan pillow 
 * OS: Windows 10
 
 ## 3. How To Run
